@@ -64,8 +64,6 @@ void * prevList(List * list) {
 
 void pushFront(List * list, const void * data) {
 
- list->current = list->head;
-// list->current->prev = 
 }
 
 void pushBack(List * list, const void * data) {
