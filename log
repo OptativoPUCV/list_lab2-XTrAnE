@@ -1,0 +1,16 @@
+Thu Mar 25 02:42:03 UTC 2021: 
+ list.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+test.c: In function ‘createList’:
+list.c:33:11: error: ‘L’ is used uninitialized in this function [-Werror=uninitialized]
+   L->head = NULL;
+           ^
+cc1: all warnings being treated as errors
+Compilation failed
+Thu Mar 25 02:42:58 UTC 2021: 
+ list.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+ tests:  1|5
+total_score: 10/70
+ff62b3f
