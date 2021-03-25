@@ -41,24 +41,31 @@ void * firstList(List * list) {
   //if (list->head == NULL) return NULL;
 
     list->current = list->head;
-    return (list->current);
+    return (void*)list->current->data;
 }
 
 void * nextList(List * list) {
 
   list->current = list->current->next;
-    return (list->current);
+    return (void*)list->current->data;
 }
 
 void * lastList(List * list) {
-    return NULL;
+
+  list->current = list->tail;
+    return (void*)list->current->data;
 }
 
 void * prevList(List * list) {
-    return NULL;
+
+  list->current = list->current->prev;
+    return (void*)list->current->data;
 }
 
 void pushFront(List * list, const void * data) {
+
+ list->current = list->head;
+// list->current->prev = 
 }
 
 void pushBack(List * list, const void * data) {
