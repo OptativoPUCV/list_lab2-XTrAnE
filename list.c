@@ -33,6 +33,7 @@ List * createList() {
  L = malloc(sizeof(int));
   L->head = NULL;
   L->tail = NULL;
+  L->current = NULL;
   return (L);
 }
 
@@ -68,6 +69,8 @@ void * prevList(List * list) {
 }
 
 void pushFront(List * list, const void * data) {
+  list->current = list->head;
+  pushCurrent(list, data);
 
 }
 
@@ -77,6 +80,7 @@ void pushBack(List * list, const void * data) {
 }
 
 void pushCurrent(List * list, const void * data) {
+
 }
 
 void * popFront(List * list) {
