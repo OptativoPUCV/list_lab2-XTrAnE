@@ -70,9 +70,16 @@ void * prevList(List * list) {
 
 void pushFront(List * list, const void * data) {
   Node *n = createNode(data);
-  n->next = list->head;
-  if(list->head!= NULL){ printf("Acá");
-        list->head->prev = n;
+  
+  if(list->head == NULL){
+
+   list->head = n;
+   list->head->prev = NULL;
+  }
+
+  if(list->head!= NULL){ 
+    n->next = list->head;
+    list->head->prev = n;
     list->head = n;
     n->prev = NULL;
   }
