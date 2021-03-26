@@ -121,7 +121,7 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-  if (list->current != NULL) free(list->current);
+  if (list->current->data != NULL) free(list->current);
     return NULL;
 }
 
