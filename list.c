@@ -144,20 +144,30 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-  //assert (list != NULL);
+  assert (list != NULL);
 
     if (list->head == NULL || list->current == NULL) return NULL;
 
   Node *aux = list->current;
 
   if (list->current == list->head){
-    list->head = list->current->next;
-    list->head->prev = NULL;
-  }
+    if (list->head == list->tail){
+        list->tail = list->head = NULL;
+    } else {
+        list->head = list->head->next;
+        list->head->prev = NULL;
+    }
+  }  
+
   if(list->current == list->tail){
+    if (list->tail == list->head){
+        list->tail = list->head = NULL;
+    } else {
       list->tail = list->tail->prev;
       list->tail->next = NULL;
-    } else { 
+    }
+
+  } else { 
       if (aux->next != NULL){
           aux->next->prev = aux->prev;
       }
@@ -165,10 +175,10 @@ void * popCurrent(List * list) {
           aux->prev->next = aux->next;
       }
     }
+    aux->data = NULL;
 
     free(aux);
-   
-  free(list->current);
+
     return NULL;
 }
 
