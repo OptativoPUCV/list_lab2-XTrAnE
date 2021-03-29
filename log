@@ -288,3 +288,11 @@ Fri Mar 26 15:38:36 UTC 2021:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 251d1aa
+Mon Mar 29 14:17:21 UTC 2021: 
+ list.c | 57 ++++++++++++++++++++++++++++++++++++++++++++++-----------
+ 1 file changed, 46 insertions(+), 11 deletions(-)
+free(): double free detected in tcache 2
+free(): double free detected in tcache 2
+ tests:  0|0
+free(): double free detected in tcache 2
+8e60149
