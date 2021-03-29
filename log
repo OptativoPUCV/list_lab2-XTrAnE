@@ -296,3 +296,11 @@ free(): double free detected in tcache 2
  tests:  0|0
 free(): double free detected in tcache 2
 8e60149
+Mon Mar 29 14:21:39 UTC 2021: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+free(): double free detected in tcache 2
+free(): double free detected in tcache 2
+ tests:  0|0
+free(): double free detected in tcache 2
+8a5e745
