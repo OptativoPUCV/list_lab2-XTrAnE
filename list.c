@@ -146,9 +146,9 @@ void * popBack(List * list) {
 void * popCurrent(List * list) {
   assert (list != NULL);
 
-//    if (list->head == NULL || list->current == NULL) return NULL;
+  if (list->head == NULL || list->current == NULL) return NULL;
 
-  Node *aux = list->current; printf("%s", (char*)list->current);
+  Node *aux = list->current; 
 
   if (list->current == list->head){
     if (list->head == list->tail){
@@ -175,6 +175,8 @@ void * popCurrent(List * list) {
           aux->prev->next = aux->next;
       }
     }
+
+    list->current = list->current->next;
     aux->data = NULL;
 
     free(aux);
