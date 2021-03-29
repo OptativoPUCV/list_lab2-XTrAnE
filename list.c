@@ -147,9 +147,9 @@ void * popCurrent(List * list) {
   assert (list != NULL);
 
     if (list->head == NULL || list->current == NULL) return NULL;
-printf("%s", (char*)list->current);
-  Node *aux = list->current;
 
+  Node *aux = list->current;
+printf("%s", (char*)list->current);
   if (list->current == list->head){
     if (list->head == list->tail){
         list->tail = list->head = NULL;
