@@ -135,7 +135,6 @@ void pushCurrent(List * list, const void * data) {
 
 void * popFront(List * list) {
     list->current = list->head;
-    printf("Here xd!");
     return popCurrent(list);
 }
 
@@ -146,10 +145,9 @@ void * popBack(List * list) {
 
 void * popCurrent(List * list) {
   assert (list != NULL);
+  
 
-  printf("Here!");
-
-  if (list->head == NULL || list->current == NULL) return NULL;
+  //if (list->head == NULL || list->current == NULL) return NULL;
 
   Node *aux = list->current; 
 
