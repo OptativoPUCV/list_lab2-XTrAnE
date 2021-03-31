@@ -153,6 +153,7 @@ void * popCurrent(List * list) {
   if (list->current == list->head){
     if (list->head == list->tail){
         list->tail = list->head = NULL;
+        return (void*)list->current->data;
     } else {
         list->head = list->head->next;
         list->head->prev = NULL;
