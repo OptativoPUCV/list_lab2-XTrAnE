@@ -158,7 +158,7 @@ void * popCurrent(List * list) {
     } else {
         list->head = list->current->next;
         list->head->prev = NULL;
-        printf("aqui");
+   
     }
     list->current = list->head;
     free(aux);
