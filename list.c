@@ -150,17 +150,17 @@ void * popCurrent(List * list) {
 
   Node *aux = list->current; 
 
-  /*if (list->current == list->head){
+  if (list->current == list->head){
     if (list->head == list->tail){
         list->tail = list->head = NULL;
     } else {
         list->head = list->head->next;
-        list->head->prev = NULL;
+        list->head->prev = NULL; list->current = list->current->next;
     }
-    list->current = list->current->next;
+   
   }  
 
-  else*/ if(list->current == list->tail){
+  else if(list->current == list->tail){
     if (list->tail == list->head){
         list->tail = list->head = NULL;
     } else {
