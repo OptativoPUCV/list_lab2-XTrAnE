@@ -135,6 +135,7 @@ void pushCurrent(List * list, const void * data) {
 
 void * popFront(List * list) {
     list->current = list->head;
+    printf("Here xd!");
     return popCurrent(list);
 }
 
@@ -145,6 +146,8 @@ void * popBack(List * list) {
 
 void * popCurrent(List * list) {
   assert (list != NULL);
+
+  printf("Here!");
 
   if (list->head == NULL || list->current == NULL) return NULL;
 
@@ -175,7 +178,7 @@ void * popCurrent(List * list) {
           aux->prev->next = aux->next;
       }
     }
-printf("Here!");
+
     list->current = list->current->next;
     aux->data = NULL;
 
