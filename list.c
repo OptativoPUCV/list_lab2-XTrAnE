@@ -161,7 +161,7 @@ void * popCurrent(List * list) {
     }
     list->current = list->head;
     free(aux);
-    return (void*)aux->data;
+    return (void*)list->current->data;
   }  
 
   else if(list->current == list->tail){
