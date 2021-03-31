@@ -176,7 +176,7 @@ void * popCurrent(List * list) {
       }
     }
 
-    list->current = list->current;
+    //list->current = list->current;
     aux->data = NULL;
 
     free(aux);
